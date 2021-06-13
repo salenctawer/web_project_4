@@ -1,5 +1,10 @@
 .footer{
     margin-top: 68px;
+    margin-bottom: 60px;
+    @include desktop-to-phone{
+      margin-bottom: 36px;
+      margin-top: 50px;
+    }
     &__title{
       font-family: Inter, sans-serif;
       font-style: normal;
@@ -7,5 +12,9 @@
       font-size: 18px;
       line-height: 22px;
       color: $gray;
+      @include desktop-to-phone{
+        font-size: 14px;
+        line-height: 17px;
+      }
     }
 }

@@ -5,5 +5,8 @@
       opacity: .7;
       border: 1px solid $gray;
       margin-top: 41px;
+      @include desktop-to-phone{
+        width: 100vw;
+      }
     }
 }

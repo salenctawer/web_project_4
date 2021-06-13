@@ -2,6 +2,9 @@
     margin-top: 40px;
     display: flex;
     align-items: center;
+    @include desktop-to-phone{
+        flex-direction: column;  
+    }
     &__avatar{
         background-image: url("../images/avatar.svg");
         width: 120px;
@@ -13,6 +16,9 @@
     flex-direction: column;
     margin-left: 30px;
     margin-right: 165px;
+    @include desktop-to-phone{
+        margin: 26px auto 36px auto; 
+    }
     &__name{
         font-family: Inter, sans-serif;
         font-style: normal;
@@ -20,6 +26,10 @@
         font-size: 42px;
         line-height: 48px;
         color: $pure-white;
+        @include desktop-to-phone{
+            font-size: 22px;
+            line-height: 27px;
+        }
     }
     &__description{
         font-family: Inter, sans-serif;
@@ -29,6 +39,12 @@
         line-height: 22px;
         color: $pure-white;
         margin-top: 10px;
+        @include desktop-to-phone{
+            font-size: 14px;
+            line-height: 17px;
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
     &__button{
         background-image: url("../images/edit-button.svg");
