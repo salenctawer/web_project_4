@@ -1,6 +1,7 @@
 include head.pug
 include header.pug
 include footer.pug
+include ../components/profile.pug
 block variables
     
 doctype html
@@ -10,4 +11,5 @@ html(lang='ru')
     body.body
         +header()
         main
+            +profile()
         +footer()

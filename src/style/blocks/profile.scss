@@ -1,0 +1,44 @@
+.profile{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    &__avatar{
+        background-image: url("../images/avatar.svg");
+        width: 120px;
+        height: 120px;
+    }
+}
+.profile-info{
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    margin-right: 165px;
+    &__name{
+        font-family: Inter, sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 42px;
+        line-height: 48px;
+        color: $pure-white;
+    }
+    &__description{
+        font-family: Inter, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 22px;
+        color: $pure-white;
+        margin-top: 10px;
+    }
+    &__button{
+        background-image: url("../images/edit-button.svg");
+        width: 24px;
+        height: 24px;
+        margin-left: 18px;
+        cursor: pointer;
+    }
+}
+.profile-info-container{
+    display: flex;
+    align-items: center;
+}
