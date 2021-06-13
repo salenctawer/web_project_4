@@ -5,9 +5,10 @@ mixin profile()
         .profile__avatar
         .profile-info
             .profile-info-container  
-                .profile-info__name Jacques Cousteau
+                h2.profile-info__name Jacques Cousteau
                 .profile-info__button
-                +form() 
-            .profile-info__description Explorer
+                +form()
+                .close 
+            p.profile-info__description Explorer
         +add-button()
         
