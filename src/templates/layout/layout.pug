@@ -1,6 +1,7 @@
 include head.pug
 include header.pug
 include footer.pug
+include ../components/grid.pug
 include ../components/profile.pug
 block variables
     
@@ -12,4 +13,5 @@ html(lang='ru')
         +header()
         main
             +profile()
+            +grid()
         +footer()

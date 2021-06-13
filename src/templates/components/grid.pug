@@ -1,0 +1,12 @@
+include grid-element.pug
+mixin grid()
+    .grid.container    
+        -
+            var elements = [{'img': "../images/grid1.png", 'title': "Yosemite Valley", 'like': "../images/like.svg"},
+                {'img': "../images/grid2.png", 'title': "Lake Louise", 'like': "../images/like.svg"},
+                {'img': "../images/grid3.png", 'title': "Bald Mountains", 'like': "../images/like.svg"},
+                {'img': "../images/grid4.png", 'title': "Latemar", 'like': "../images/like.svg"},
+                {'img': "../images/grid5.png", 'title': "Vanoise Nationa...", 'like': "../images/like.svg"},
+                {'img': "../images/grid6.png", 'title': "Lago di Braies", 'like': "../images/like.svg"}]
+        each p in elements
+            +element(p)
