@@ -2,6 +2,7 @@
     margin-top: 40px;
     display: flex;
     align-items: center;
+    position: relative;
     @include desktop-to-phone{
         flex-direction: column;  
     }
@@ -52,6 +53,9 @@
         height: 24px;
         margin-left: 18px;
         cursor: pointer;
+    }
+    &__button:hover{
+        opacity: .6;
     }
 }
 .profile-info-container{

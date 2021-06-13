@@ -1,11 +1,13 @@
 include add-button.pug
+include form.pug
 mixin profile()
     section.profile.container
         .profile__avatar
         .profile-info
             .profile-info-container  
                 .profile-info__name Jacques Cousteau
-                .profile-info__button 
+                .profile-info__button
+                +form() 
             .profile-info__description Explorer
         +add-button()
         
