@@ -2,13 +2,8 @@
     background-image: url("../images/close.svg");
     width: 40px;
     height: 40px;
-    // transform: rotate(-45deg);
-    display: none;
-    position: fixed;
     background-position: center center;
     cursor: pointer;
-    right: 690px;
-    top: 200px;
 }
 .close:hover{
     opacity: .6;

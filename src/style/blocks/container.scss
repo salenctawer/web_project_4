@@ -3,6 +3,6 @@
     margin-left: auto;
     margin-right: auto;
     @include desktop-to-phone{
-        width: calc(100% - 28px);
+        width: calc(100% - 38px);
     }
 }

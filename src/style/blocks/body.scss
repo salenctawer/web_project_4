@@ -2,6 +2,7 @@
     background-color: $pure-black;
     width: 1280px;
     margin: auto;
+    position: relative;
     @include desktop-to-phone{
         width: 100%;
     }
