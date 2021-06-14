@@ -13,7 +13,8 @@
     margin-right: 0;
     margin-left: auto;
     @include desktop-to-phone{
-        width: 282px; 
+        width: 282px;
+        margin-right: auto; 
     }
 }
 .add-button:hover{
