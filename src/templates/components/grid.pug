@@ -2,11 +2,11 @@ include grid-element.pug
 mixin grid()
     .grid.container    
         -
-            var elements = [{'img': "../images/grid1.png", 'title': "Yosemite Valley", 'like': "../images/like.svg"},
-                {'img': "../images/grid2.png", 'title': "Lake Louise", 'like': "../images/like.svg"},
-                {'img': "../images/grid3.png", 'title': "Bald Mountains", 'like': "../images/like.svg"},
-                {'img': "../images/grid4.png", 'title': "Latemar", 'like': "../images/like.svg"},
-                {'img': "../images/grid5.png", 'title': "Vanoise National", 'like': "../images/like.svg"},
-                {'img': "../images/grid6.png", 'title': "Lago di Braies", 'like': "../images/like.svg"}]
+            var elements = [{'img': "../images/grid1.png", 'title': "Yosemite Valley"},
+                {'img': "../images/grid2.png", 'title': "Lake Louise"},
+                {'img': "../images/grid3.png", 'title': "Bald Mountains"},
+                {'img': "../images/grid4.png", 'title': "Latemar"},
+                {'img': "../images/grid5.png", 'title': "Vanoise National"},
+                {'img': "../images/grid6.png", 'title': "Lago di Braies"}]
         each p in elements
             +element(p)

@@ -1,5 +1,5 @@
 const editBtn = document.querySelector('.profile-info__button');
-const form = document.querySelector('.form-container');
+const form = document.querySelector('.form-content');
 const closeBtn = document.querySelector('.close');
 const formName = form.querySelector('.form-name');
 const formDescription = form.querySelector('.form-description');
@@ -20,4 +20,5 @@ form.addEventListener('submit', function(e){
     profileDescription.innerHTML=formDescription.value;
     form.style.display = 'none';
 });
+
 

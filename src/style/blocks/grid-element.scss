@@ -6,9 +6,25 @@
     }
     &__like{
         cursor: pointer;
+        background-image: url("../images/like.svg");
+        background-repeat: no-repeat;
+        width: 21px;
+        height: 19px;
+        background-position: center center;
     }
     &__like:hover{
         opacity: .5;
+    }
+    &__like_active{
+        background-image: url("../images/like-black.svg");
+    }
+    &__trash{
+        background-image: url("../images/trash.svg");
+        background-repeat: no-repeat;
+        width: 18px;
+        height: 19px;
+        background-position: center center;
+        cursor: pointer;
     }
 }
 .grid-element-container{
@@ -16,4 +32,5 @@
     margin: 20px auto 25px auto;
     width: 246px;
     justify-content: space-between;
+    align-items: center;
 }

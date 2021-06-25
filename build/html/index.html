@@ -23,53 +23,64 @@
           <div class="profile-info-container"> 
             <h2 class="profile-info__name">Jacques Cousteau</h2>
             <div class="profile-info__button"></div>
-            <div class="form-container">
-              <div class="form-content">
-                <div class="form">
-                  <h2 class="title">Edit profile</h2>
-                  <form class="form-text-container" action=""> 
-                    <input class="form__input form-name" type="text"/>
-                    <input class="form__input form-description" type="text"/>
-                    <button class="form__button" type="submit">Save</button>
-                  </form>
-                </div>
-                <div class="close"> </div>
-              </div>
-            </div>
           </div>
           <p class="profile-info__description">Explorer</p>
         </div>
         <button class="add-button"></button>
       </section>
       <div class="grid container">   
-        <div class="grid-element"><img class="grid-element__img" src="../images/grid1.png" alt=""/>
+        <div class="grid-element">
+          <div class="grid-element-top"><img class="grid-element__img" src="../images/grid1.png" alt=""/>
+            <div class="grid-element__trash"></div>
+          </div>
           <div class="grid-element-container">
-            <h2 class="title">Yosemite Valley</h2><img class="grid-element__like" src="../images/like.svg" alt="like"/>
+            <h2 class="title">Yosemite Valley</h2>
+            <div class="grid-element__like"></div>
           </div>
         </div>
-        <div class="grid-element"><img class="grid-element__img" src="../images/grid2.png" alt=""/>
+        <div class="grid-element">
+          <div class="grid-element-top"><img class="grid-element__img" src="../images/grid2.png" alt=""/>
+            <div class="grid-element__trash"></div>
+          </div>
           <div class="grid-element-container">
-            <h2 class="title">Lake Louise</h2><img class="grid-element__like" src="../images/like.svg" alt="like"/>
+            <h2 class="title">Lake Louise</h2>
+            <div class="grid-element__like"></div>
           </div>
         </div>
-        <div class="grid-element"><img class="grid-element__img" src="../images/grid3.png" alt=""/>
+        <div class="grid-element">
+          <div class="grid-element-top"><img class="grid-element__img" src="../images/grid3.png" alt=""/>
+            <div class="grid-element__trash"></div>
+          </div>
           <div class="grid-element-container">
-            <h2 class="title">Bald Mountains</h2><img class="grid-element__like" src="../images/like.svg" alt="like"/>
+            <h2 class="title">Bald Mountains</h2>
+            <div class="grid-element__like"></div>
           </div>
         </div>
-        <div class="grid-element"><img class="grid-element__img" src="../images/grid4.png" alt=""/>
+        <div class="grid-element">
+          <div class="grid-element-top"><img class="grid-element__img" src="../images/grid4.png" alt=""/>
+            <div class="grid-element__trash"></div>
+          </div>
           <div class="grid-element-container">
-            <h2 class="title">Latemar</h2><img class="grid-element__like" src="../images/like.svg" alt="like"/>
+            <h2 class="title">Latemar</h2>
+            <div class="grid-element__like"></div>
           </div>
         </div>
-        <div class="grid-element"><img class="grid-element__img" src="../images/grid5.png" alt=""/>
+        <div class="grid-element">
+          <div class="grid-element-top"><img class="grid-element__img" src="../images/grid5.png" alt=""/>
+            <div class="grid-element__trash"></div>
+          </div>
           <div class="grid-element-container">
-            <h2 class="title">Vanoise National</h2><img class="grid-element__like" src="../images/like.svg" alt="like"/>
+            <h2 class="title">Vanoise National</h2>
+            <div class="grid-element__like"></div>
           </div>
         </div>
-        <div class="grid-element"><img class="grid-element__img" src="../images/grid6.png" alt=""/>
+        <div class="grid-element">
+          <div class="grid-element-top"><img class="grid-element__img" src="../images/grid6.png" alt=""/>
+            <div class="grid-element__trash"></div>
+          </div>
           <div class="grid-element-container">
-            <h2 class="title">Lago di Braies</h2><img class="grid-element__like" src="../images/like.svg" alt="like"/>
+            <h2 class="title">Lago di Braies</h2>
+            <div class="grid-element__like"></div>
           </div>
         </div>
       </div>
@@ -77,5 +88,20 @@
     <footer class="footer container">
       <h2 class="footer__title">© 2021 Around The U.S.</h2>
     </footer>
+    <template class="template-form">
+      <div class="blackout">
+        <div class="form-content">
+          <div class="form">
+            <h2 class="title">Edit profile</h2>
+            <form class="form-text-container" action=""> 
+              <input class="form__input form-name" type="text" placehodler="Title"/>
+              <input class="form__input form-description" type="text" placehodler="Image link"/>
+              <button class="form__button" type="submit">Save</button>
+            </form>
+          </div>
+          <div class="close"> </div>
+        </div>
+      </div>
+    </template>
   </body>
 </html>

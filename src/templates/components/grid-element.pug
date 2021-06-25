@@ -1,6 +1,8 @@
 mixin element(element)
     .grid-element
-        img(src=element.img  alt="").grid-element__img
+        .grid-element-top
+            img(src=element.img  alt="").grid-element__img
+            .grid-element__trash
         .grid-element-container
             h2.title=element.title
-            img(src=element.like, alt="like").grid-element__like
+            .grid-element__like
