@@ -1,4 +1,6 @@
 include add-button.pug
+include form-rename.pug
+include form-card.pug
 mixin profile()
     section.profile.container
         .profile__avatar
@@ -6,6 +8,8 @@ mixin profile()
             .profile-info-container  
                 h2.profile-info__name Jacques Cousteau
                 .profile-info__button
+                +form-rename()
             p.profile-info__description Explorer
         +add-button()
+        +form-card()
         

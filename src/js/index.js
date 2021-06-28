@@ -1,3 +1,4 @@
 //= libs.js
-//= form.js
+//= form-rename.js
 //= like-element.js
+//= form-card.js

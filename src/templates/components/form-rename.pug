@@ -1,11 +1,12 @@
-mixin form()
-    .blackout
-        .form-content
-            .form
-                h2.title Edit profile
-                form(action="").form-text-container 
-                    input(type="text").form__input.form-name
-                    input(type="text").form__input.form-description
-                    button(type='submit').form__button Save
-            .close 
+mixin form-rename()
+    .form-rename
+        .blackout
+            .form-content
+                .form
+                    h2.title Edit profile
+                    form(action="").form-text-container 
+                        input(type="text").form__input.form-name
+                        input(type="text").form__input.form-description
+                        button(type='submit').form__button Save
+                .close 
     

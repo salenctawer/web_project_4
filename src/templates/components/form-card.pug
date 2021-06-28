@@ -1,11 +1,11 @@
 mixin form-card()
-    template.template-form
+    .form-card
         .blackout
             .form-content
                 .form
-                    h2.title Edit profile
+                    h2.title New place
                     form(action="").form-text-container 
-                        input(type="text" placehodler="Title").form__input.form-name
-                        input(type="text" placehodler="Image link").form__input.form-description
+                        input(type="text" placeholder="Title").form__input.form-name
+                        input(type="text" placeholder="Image link").form__input.form-description
                         button(type='submit').form__button Save
                 .close 
