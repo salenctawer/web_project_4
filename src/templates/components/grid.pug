@@ -1,12 +1,9 @@
-include grid-element.pug
 mixin grid()
-    .grid.container    
-        -
-            var elements = [{'img': "../images/grid1.png", 'title': "Yosemite Valley"},
-                {'img': "../images/grid2.png", 'title': "Lake Louise"},
-                {'img': "../images/grid3.png", 'title': "Bald Mountains"},
-                {'img': "../images/grid4.png", 'title': "Latemar"},
-                {'img': "../images/grid5.png", 'title': "Vanoise National"},
-                {'img': "../images/grid6.png", 'title': "Lago di Braies"}]
-        each p in elements
-            +element(p)
+    .grid.container
+        template#card-template    
+            .grid-element
+                .grid-element__img
+                    .grid-element__trash
+                .grid-element-container
+                    h2.title
+                    .grid-element__like

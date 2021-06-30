@@ -29,8 +29,8 @@
                   <div class="form">
                     <h2 class="title">Edit profile</h2>
                     <form class="form-text-container" action=""> 
-                      <input class="form__input form-name" type="text"/>
-                      <input class="form__input form-description" type="text"/>
+                      <input class="form__input" type="text" id="form-name"/>
+                      <input class="form__input" type="text" id="form-description"/>
                       <button class="form__button" type="submit">Save</button>
                     </form>
                   </div>
@@ -48,8 +48,8 @@
               <div class="form">
                 <h2 class="title">New place</h2>
                 <form class="form-text-container" action=""> 
-                  <input class="form__input form-name" type="text" placeholder="Title"/>
-                  <input class="form__input form-description" type="text" placeholder="Image link"/>
+                  <input class="form__input" type="text" placeholder="Title" id="card-title"/>
+                  <input class="form__input" type="text" placeholder="Image link" id="card-link"/>
                   <button class="form__button" type="submit">Save</button>
                 </form>
               </div>
@@ -58,61 +58,18 @@
           </div>
         </div>
       </section>
-      <div class="grid container">   
-        <div class="grid-element">
-          <div class="grid-element-top"><img class="grid-element__img" src="../images/grid1.png" alt=""/>
-            <div class="grid-element__trash"></div>
+      <div class="grid container">
+        <template id="card-template">   
+          <div class="grid-element">
+            <div class="grid-element__img">
+              <div class="grid-element__trash"></div>
+            </div>
+            <div class="grid-element-container">
+              <h2 class="title"></h2>
+              <div class="grid-element__like"></div>
+            </div>
           </div>
-          <div class="grid-element-container">
-            <h2 class="title">Yosemite Valley</h2>
-            <div class="grid-element__like"></div>
-          </div>
-        </div>
-        <div class="grid-element">
-          <div class="grid-element-top"><img class="grid-element__img" src="../images/grid2.png" alt=""/>
-            <div class="grid-element__trash"></div>
-          </div>
-          <div class="grid-element-container">
-            <h2 class="title">Lake Louise</h2>
-            <div class="grid-element__like"></div>
-          </div>
-        </div>
-        <div class="grid-element">
-          <div class="grid-element-top"><img class="grid-element__img" src="../images/grid3.png" alt=""/>
-            <div class="grid-element__trash"></div>
-          </div>
-          <div class="grid-element-container">
-            <h2 class="title">Bald Mountains</h2>
-            <div class="grid-element__like"></div>
-          </div>
-        </div>
-        <div class="grid-element">
-          <div class="grid-element-top"><img class="grid-element__img" src="../images/grid4.png" alt=""/>
-            <div class="grid-element__trash"></div>
-          </div>
-          <div class="grid-element-container">
-            <h2 class="title">Latemar</h2>
-            <div class="grid-element__like"></div>
-          </div>
-        </div>
-        <div class="grid-element">
-          <div class="grid-element-top"><img class="grid-element__img" src="../images/grid5.png" alt=""/>
-            <div class="grid-element__trash"></div>
-          </div>
-          <div class="grid-element-container">
-            <h2 class="title">Vanoise National</h2>
-            <div class="grid-element__like"></div>
-          </div>
-        </div>
-        <div class="grid-element">
-          <div class="grid-element-top"><img class="grid-element__img" src="../images/grid6.png" alt=""/>
-            <div class="grid-element__trash"></div>
-          </div>
-          <div class="grid-element-container">
-            <h2 class="title">Lago di Braies</h2>
-            <div class="grid-element__like"></div>
-          </div>
-        </div>
+        </template>
       </div>
     </main>
     <footer class="footer container">
