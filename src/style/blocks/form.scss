@@ -6,10 +6,23 @@
     display: flex;
 }
 .form-rename{
-    display: none;
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.5s, opacity 0.3s linear;
+    height: 0;
 }
 .form-card{
-    display: none;
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.5s, opacity 0.3s linear;
+    height: 0;
+}
+.--active{
+    visibility: visible;
+    opacity: 1;
+    height: auto;
 }
 .form{
     width: 430px;

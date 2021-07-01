@@ -14,8 +14,8 @@ let openInfo = (inputNameValue, inputDescriptionValue) =>{
 let closeFunction = () =>{
     for (let close of closeBtn){
         close.addEventListener('click', ()=>{
-            formRename.style.display = 'none';
-            formCard.style.display = 'none';
+            formRename.classList.remove('--active');
+            formCard.classList.remove('--active');
         });
     }
 };
@@ -25,64 +25,65 @@ profileContainer.querySelector('.profile-info__button').addEventListener('click'
     const nameProfile = profileContainer.querySelector('.profile-info__name');
     const descriptionProfile = profileContainer.querySelector('.profile-info__description');
     openInfo(nameProfile.textContent, descriptionProfile.textContent);
-    formRename.style.display = 'flex';
+    formRename.classList.add('--active');
     closeFunction();
     formRename.addEventListener('submit', (e)=>{
         e.preventDefault();
         saveInfo(nameInput.value, descriptionInput.value);
-        formRename.style.display = 'none';
+        formRename.classList.remove('--active');
     });
 });
 
 let initialCards = [
     {
-        name: 'Yosemite Valley',
-        link: 'https://code.s3.yandex.net/web-code/yosemite.jpg'
-    },
-    {
-        name: 'Lake Louise',
-        link: 'https://code.s3.yandex.net/web-code/lake-louise.jpg'
-    },
-    {
-        name: 'Bald Mountains',
-        link: 'https://code.s3.yandex.net/web-code/bald-mountains.jpg'
-    },
-    {
-        name: 'Latemar',
-        link: 'https://code.s3.yandex.net/web-code/latemar.jpg'
+        name: 'Lago di Braies',
+        link: 'https://code.s3.yandex.net/web-code/lago.jpg'
     },
     {
         name: 'Vanoise National Park',
         link: 'https://code.s3.yandex.net/web-code/vanoise.jpg'
     },
     {
-        name: 'Lago di Braies',
-        link: 'https://code.s3.yandex.net/web-code/lago.jpg'
+        name: 'Latemar',
+        link: 'https://code.s3.yandex.net/web-code/latemar.jpg'
+    },
+    {
+        name: 'Bald Mountains',
+        link: 'https://code.s3.yandex.net/web-code/bald-mountains.jpg'
+    },
+    {
+        name: 'Lake Louise',
+        link: 'https://code.s3.yandex.net/web-code/lake-louise.jpg'
+    },
+    {
+        name: 'Yosemite Valley',
+        link: 'https://code.s3.yandex.net/web-code/yosemite.jpg'
     }
 ]; 
-let addCard = () =>{
-    const cardTemplate = document.querySelector('#card-template').content;
-    initialCards.forEach(element => {
-        const cardElement = cardTemplate.querySelector('.grid-element').cloneNode(true);
-        cardElement.querySelector('.grid-element__img').style.backgroundImage = 'url('+  element.link + ')';
-        cardElement.querySelector('.title').textContent = element.name;
-        document.querySelector('.grid').append(cardElement);
-    });
-};
-addCard();
-
 let addNewCard = (elementLink, elementName) =>{
     const cardTemplate = document.querySelector('#card-template').content;
     const cardElement = cardTemplate.querySelector('.grid-element').cloneNode(true);
     cardElement.querySelector('.grid-element__img').style.backgroundImage = 'url('+ elementLink + ')';
     cardElement.querySelector('.title').textContent = elementName;
     document.querySelector('.grid').prepend(cardElement);
-    initialCards.push({name:elementName, link:elementLink})
+    cardElement.querySelector('.grid-element__trash').addEventListener('click', (e)=>{
+        e.stopPropagation();
+        e.target.parentNode.parentNode.parentNode.removeChild(e.target.parentNode.parentNode);
+    });
+    cardElement.querySelector('.grid-element__like').addEventListener('click', (e)=> {
+        e.target.classList.toggle('grid-element__like_active');
+    });
 };
+let addCard = () =>{
+    initialCards.forEach(element => {
+        addNewCard(element.link, element.name);
+    });
+};
+addCard();
 
 
 profileContainer.querySelector('.add-button').addEventListener('click', ()=>{
-    formCard.style.display = 'flex';
+    formCard.classList.add('--active');
     closeFunction();
 });
 
@@ -91,17 +92,7 @@ formCard.addEventListener('submit', (e)=>{
     const linkCard = formCard.querySelector('#card-link');
     addNewCard(linkCard.value, titleCard.value);
     e.preventDefault();
-    formCard.style.display = 'none';
+    formCard.classList.remove('--active');
 });
 
-const deleteBtn = document.querySelectorAll('.grid-element__trash');
 
-let deleteFunction = () =>{
-    for (let deletes of deleteBtn){
-        deletes.addEventListener('click', (e)=>{
-            e.stopPropagation()
-            deletes.parentNode.parentNode.parentNode.removeChild(deletes.parentNode.parentNode);
-        });
-    }
-};
-deleteFunction();
