@@ -59,7 +59,7 @@ let initialCards = [
         name: 'Lago di Braies',
         link: 'https://code.s3.yandex.net/web-code/lago.jpg'
     }
-  ]; 
+]; 
 let addCard = () =>{
     const cardTemplate = document.querySelector('#card-template').content;
     initialCards.forEach(element => {
@@ -69,38 +69,38 @@ let addCard = () =>{
         document.querySelector('.grid').append(cardElement);
     });
 };
- addCard();
+addCard();
 
 let addNewCard = (elementLink, elementName) =>{
     const cardTemplate = document.querySelector('#card-template').content;
     const cardElement = cardTemplate.querySelector('.grid-element').cloneNode(true);
     cardElement.querySelector('.grid-element__img').style.backgroundImage = 'url('+ elementLink + ')';
     cardElement.querySelector('.title').textContent = elementName;
-    document.querySelector('.grid').append(cardElement);
+    document.querySelector('.grid').prepend(cardElement);
+    initialCards.push({name:elementName, link:elementLink})
 };
 
 
 profileContainer.querySelector('.add-button').addEventListener('click', ()=>{
-  formCard.style.display = 'flex';
-  closeFunction();
+    formCard.style.display = 'flex';
+    closeFunction();
 });
 
 formCard.addEventListener('submit', (e)=>{
-  const titleCard = formCard.querySelector('#card-title');
-  const linkCard = formCard.querySelector('#card-link');
-  addNewCard(linkCard.value, titleCard.value);
-  e.preventDefault();
-  formCard.style.display = 'none';
+    const titleCard = formCard.querySelector('#card-title');
+    const linkCard = formCard.querySelector('#card-link');
+    addNewCard(linkCard.value, titleCard.value);
+    e.preventDefault();
+    formCard.style.display = 'none';
 });
 
 const deleteBtn = document.querySelectorAll('.grid-element__trash');
-const gridElement = document.querySelectorAll('.grid-element')
 
 let deleteFunction = () =>{
     for (let deletes of deleteBtn){
-        deletes.addEventListener('click', ()=>{
+        deletes.addEventListener('click', (e)=>{
+            e.stopPropagation()
             deletes.parentNode.parentNode.parentNode.removeChild(deletes.parentNode.parentNode);
-            console.log('1');
         });
     }
 };

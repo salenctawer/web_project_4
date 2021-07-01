@@ -1,0 +1,24 @@
+.photo-element{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    &__container{
+        display: flex;
+    }
+    &__title{
+        font-family: Inter;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 15px;
+        color: $pure-white;
+    }
+    &__img{
+        width: 500px;
+        height: 500px;
+        background-size: cover;
+    }
+}
