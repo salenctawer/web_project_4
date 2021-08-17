@@ -2,3 +2,4 @@
 //= forms.js
 //= like-element.js
 //= photo-element.js
+//= validate.js
