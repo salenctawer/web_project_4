@@ -43,19 +43,28 @@
         border-left: none;
         border-right: none;
         border-bottom: 1px solid #00000033;
-        margin-bottom: 30px;
+        margin-top: 40px;
         padding-top: 10px;
         padding-bottom: 10px;
         box-sizing: border-box;
         outline: none;
     }
     &__input_type_error{
-        border-bottom-color: red;
+        border-bottom-color: $red;
+    }
+    &__input-error_active{
+        font-family: Inter;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 15px;
+        color: $red;
     }
     &__button{
         background: $pure-black;
         border-radius: 2px;
-        margin-top: 18px;
+        margin-top: auto;
+        margin-bottom: 0;
         font-size: 18px;
         line-height: 22px;
         text-align: center;
@@ -70,7 +79,7 @@
         opacity: .8;
     }
     .title{
-        margin-bottom: 54px;
+        margin-bottom: 0px;
     }
 }
 .popup__form{

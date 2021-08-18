@@ -5,7 +5,7 @@ mixin form-card()
                 .form
                     h2.title New place
                     form(action="" novalidate).popup__form 
-                        input(type="text" placeholder="Title" required).form__input#card-title
+                        input(type="text" placeholder="Title" required minlength="1" maxlength="30").form__input#card-title
                         span.card-title-error.form__input-error
                         input(type="url" placeholder="Image link" required).form__input#card-link
                         span.card-link-error.form__input-error
