@@ -49,11 +49,8 @@
         box-sizing: border-box;
         outline: none;
     }
-    &__input:invalid{
-        border-bottom: 1px solid red;
-    }
-    &__input:valid{
-        border-bottom: 1px solid green;
+    &__input_type_error{
+        border-bottom-color: red;
     }
     &__button{
         background: $pure-black;
@@ -76,7 +73,7 @@
         margin-bottom: 54px;
     }
 }
-.form-text-container{
+.popup__form{
     display: flex;
     flex-direction: column;
     height: 100%;

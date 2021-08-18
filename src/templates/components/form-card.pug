@@ -4,8 +4,10 @@ mixin form-card()
             .form-content
                 .form
                     h2.title New place
-                    form(action="").form-text-container 
-                        input(type="text" placeholder="Title").form__input#card-title
-                        input(type="text" placeholder="Image link").form__input#card-link
+                    form(action="" novalidate).popup__form 
+                        input(type="text" placeholder="Title" required).form__input#card-title
+                        span.card-title-error.form__input-error
+                        input(type="url" placeholder="Image link" required).form__input#card-link
+                        span.card-link-error.form__input-error
                         button(type='submit').form__button Save
                 .close 

@@ -4,9 +4,11 @@ mixin form-rename()
             .form-content
                 .form
                     h2.title Edit profile
-                    form(action="").form-text-container 
+                    form(action="" novalidate).popup__form 
                         input(type="text" required maxlength="40" minlength="2").form__input#form-name
+                        span.form-name-error.form__input-error
                         input(type="text" required maxlength="200" minlength="2").form__input#form-description
+                        span.form-description-error.form__input-error
                         button(type='submit').form__button Save
                 .close 
     
